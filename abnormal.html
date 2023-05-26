@@ -96,7 +96,7 @@
 					</div>
 				</div>
 				<ul class="nav">
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a href="index.html">
 							<i class="la la-dashboard"></i>
 							<p>Dashboard</p>
@@ -107,26 +107,27 @@
 							<i class="la la-history"></i>
 							<p>History</p>
 						</a>
-					</li>
-					<li class="nav-item active">
-						<a href="abnormal.html">
-							<i class="la la-book"></i>
-							<p>Anomaly logs</p>
-							<span class="badge badge-danger">50</span>
-						</a>
-					</li>
+					</li> -->
 					<li class="nav-item" >
-						<a href="manage.html">
-							<i class="la la-cog"></i>
-							<p>Setting</p>
-						</a>
-					</li>
-					<li class="nav-item" style="border-bottom: 1px solid #eee;">
 						<a href="train.html">
 							<i class="la la-cogs"></i>
 							<p>Train model</p>
 						</a>
 					</li>
+					<li class="nav-item active" style="border-bottom: 1px solid #eee;">
+						<a href="abnormal.html">
+							<i class="la la-book"></i>
+							<p>Anomaly logs</p>
+							<span class="badge badge-danger" id="abcnt"></span>
+						</a>
+					</li>
+					<!-- <li class="nav-item" >
+						<a href="manage.html">
+							<i class="la la-cog"></i>
+							<p>Setting</p>
+						</a>
+					</li> -->
+
 					
 					<li class="nav-item update-pro">
 						<button  data-toggle="modal" data-target="#outlogin" class="btn btn-danger">
@@ -153,9 +154,9 @@
 									<p class="card-category">Only show 10 records each page</p>
 									</div>
 									<div class="col-md-12">
-										<div class="" id="accordion2" style="">
+										<div class="" id="accordion2">
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse1" class="text-warning"><b>2018-11-12 /14:15:55 /DDos</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse1" class="text-warning"><b>2022-11-13 /14:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse1" class="collapse in" aria-expanded="true">
@@ -305,7 +306,7 @@
 											</div>
 										
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse2" class="text-warning"><b>2018-11-12 /14:15:55 /Web Attack</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse2" class="text-warning"><b>2022-11-13 /14:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse2" class="collapse in" aria-expanded="true">
@@ -455,7 +456,7 @@
 											</div>
 											
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse3" class="text-warning"><b>2018-11-12 /14:15:55 /Portscan</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse3" class="text-warning"><b>2022-11-13 /14:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse3" class="collapse in" aria-expanded="true">
@@ -605,7 +606,7 @@
 											</div>
 											
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse4" class="text-warning"><b>2018-11-10 /15:15:55 /Portscan</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse4" class="text-warning"><b>2018-11-10 /15:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse4" class="collapse in" aria-expanded="true">
@@ -755,7 +756,7 @@
 											</div>
 											
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse5" class="text-warning"><b>2018-12-12 /14:17:55 /Portscan</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse5" class="text-warning"><b>2018-12-12 /14:17:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse5" class="collapse in" aria-expanded="true">
@@ -905,7 +906,7 @@
 											</div>
 											
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse6" class="text-warning"><b>2018-11-12 /14:15:55 /DDos</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse6" class="text-warning"><b>2022-11-13 /14:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse6" class="collapse in" aria-expanded="true">
@@ -1055,7 +1056,7 @@
 											</div>
 											
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse7" class="text-warning"><b>2018-11-12 /14:15:55 /Portscan</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse7" class="text-warning"><b>2022-11-13 /14:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse7" class="collapse in" aria-expanded="true">
@@ -1205,7 +1206,7 @@
 											</div>
 											
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse9" class="text-warning"><b>2018-11-12 /14:15:55 /Dos</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse9" class="text-warning"><b>2022-11-13 /14:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse9" class="collapse in" aria-expanded="true">
@@ -1355,7 +1356,7 @@
 											</div>
 											
 											<p class="card-header">
-											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse10" class="text-warning"><b>2018-11-12 /14:15:55 /Portscan</b></a>
+											<a data-toggle="collapse" data-parent="#accordion2" href="#collapse10" class="text-warning"><b>2022-11-13 /14:15:55 数据异常</b></a>
 											</p>
 											<div class="clearfix"></div>
 											<div id="collapse10" class="collapse in" aria-expanded="true">
@@ -1543,23 +1544,12 @@
 												<li class="page-item"><input type="text" class="form-control input-pill" id="pillInput" placeholder="Input the number"></li>
 												<li class="page-item">&nbsp;&nbsp;<button class="btn btn-primary btn-round">Go</button></li>
 												<li class="page-item">
-												&nbsp;&nbsp;&nbsp;&nbsp;
-													<button class="btn btn-primary btn-round">This page has been read</button>
-													&nbsp;&nbsp;
-													<button class="btn btn-primary btn-border btn-round">All pages have been read</button>
 												</li>
 											</ul>
 										<p></p>
 									</div>
 								</div>
-														
-						
-						
-						
-						
-					</div>
-						
-						
+					</div>	
 				</div>
 			</div>
 				<footer class="footer">
@@ -1593,7 +1583,18 @@
 		</div>
 	</div>
 </body>
-
+<script type="text/javascript">
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	if(urlParams.has('cnt')){
+		const cnt = urlParams.get('cnt');
+		console.log(cnt,"xxxxx")
+		$('#abcnt').html(cnt)
+	} else{
+		console.log("找不到")
+		$('#accordion2').html("")
+	}
+</script>
 
 <script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script src="assets/js/core/popper.min.js"></script>
