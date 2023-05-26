@@ -182,9 +182,9 @@
 										<label for="pillSelect">Train dataset</label>
 										<select class="form-control input-pill" id="pillSelect">
 											<option disabled selected hidden>Select dataset to detect</option>
-											<option>data1.csv</option>
-											<option>data2.csv</option>
-											<option>data3.csv</option>
+											<option>2022-11-13.csv</option>
+											<option>2022-11-14.csv</option>
+											<option>2022-11-15.csv</option>
 										</select>
 									</div>
 									<div class="card-footer">
@@ -228,24 +228,42 @@
 											// 启动动画
 											requestAnimationFrame(animate);
 										}
-										const modifyNum = (anomalyCnt, str) => {
+										const modifyNum = (anomalyCnt,date, str) => {
 											$("#model_inf").html(str);
 											$('#abcnt').html(anomalyCnt)
-											$('#abnormalJump').attr('href', "abnormal.html?cnt=" + anomalyCnt);
+											$('#abnormalJump').attr('href', "abnormal.html?cnt=" + anomalyCnt + '&datafile='+"2022-11-1"+date);
+
+										}
+
+										const showData = (idx) => {
+											$('#previewData').html("")
+											const date = '2022-11-1' + (idx+2);
+											console.log(date)
+											const pre = '<p class="card-header"> <b>';
+											const suf = '</b></p>';
+											let strAll = ''
+											for(let i = 0; i < 5 ; i++) {
+												if(i % 2 === 0){
+													strAll += pre + date + ' 冷凝数据' + suf;
+												} else{
+													strAll += pre + date + ' 压力数据' + suf;
+												}
+											}
+											return strAll;
 										}
 										$(function () {
 											$("#model_inf").html("Accuracy: ---%&nbsp;&nbsp;Recall: ---&nbsp;&nbsp;Precision: ---&nbsp;&nbsp;Samples: ----");
 											console.log("?????")
 											$("#pillSelect").change(function () {
-												$('#previewData').css('display','block');
+												const idx = $(this).prop("selectedIndex");
+												$('#previewData').html(showData(idx))
 												$("#model_inf").html("Accuracy: ---%&nbsp;&nbsp;Recall: ---&nbsp;&nbsp;Precision: ---&nbsp;&nbsp;Samples: ----");
 												$('#trainbtn').click(() => {
 													drawCircle()
 													setTimeout(() => {
-														const idx = $(this).prop("selectedIndex");
-														if (idx == "1") modifyNum(15, "Accuracy: 91.8%&nbsp;&nbsp;Recall: 95.0%&nbsp;&nbsp;Precision: 92.0%&nbsp;&nbsp;Samples: 2706005")
-														else if (idx == "2") modifyNum(17, "Accuracy: 90.8%&nbsp;&nbsp;Recall: 94.2%&nbsp;&nbsp;Precision: 91.8%&nbsp;&nbsp;Samples: 1240023")
-														else if (idx == "3") modifyNum(15, "Accuracy: 86.8%&nbsp;&nbsp;Recall: 92.0%&nbsp;&nbsp;Precision: 87.0%&nbsp;&nbsp;Samples: 5705005")
+														if (idx == "1") modifyNum(15,3,"Accuracy: 91.8%&nbsp;&nbsp;Recall: 95.0%&nbsp;&nbsp;Precision: 92.0%&nbsp;&nbsp;Samples: 2706005")
+														else if (idx == "2") modifyNum(17,4, "Accuracy: 90.8%&nbsp;&nbsp;Recall: 94.2%&nbsp;&nbsp;Precision: 91.8%&nbsp;&nbsp;Samples: 1240023")
+														else if (idx == "3") modifyNum(15,5, "Accuracy: 86.8%&nbsp;&nbsp;Recall: 92.0%&nbsp;&nbsp;Precision: 87.0%&nbsp;&nbsp;Samples: 5705005")
 													}, 2500);
 												})
 											});
@@ -261,8 +279,8 @@
 								<div class="card-header">
 									<div class="card-title">Data preview (5 for preview)</div>
 								</div>
-								<div class="card-body" id="previewData" style="display: none;">
-									<p class="card-header">
+								<div class="card-body" id="previewData" style="display: block;">
+									<!-- <p class="card-header">
 										<b>2022-11-13 冷凝数据</b>
 									</p>
 									<p class="card-header">
@@ -276,7 +294,7 @@
 									</p>
 									<p class="card-header">
 										<b>2022-11-13 冷凝数据</b>
-									</p>
+									</p> -->
 								</div>
 								</div>
 							</div>
